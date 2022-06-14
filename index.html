@@ -26,6 +26,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <input type='submit' value='submit' />
     </form>
 
-    <script src="index.js"></script>
+    <script src="index.js">
+      function enhancedConversion(event){
+	      var form_values = {};
+	      for (var i = 0; i < form.length; i++){
+		      form_values[form[i].name] = form[i].value;
+	      }
+	      console.log (form_values);
+  	    return form_values.email;
+      }
+
+    var form = document.querySelector('form');
+    form.addEventListener('submit', enhancedConversion);
+    </script>
   </body>
 </html>
