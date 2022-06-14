@@ -4,13 +4,13 @@
     <script>
 	window.dataLayer = window.dataLayer || [];
 	function handleSubmit(event) {
-  	var data = new FormData(event.target);
-  	this.email = data.get('email');
-  	dataLayer.push({
+  	    var data = new FormData(event.target);
+  	    var email = data.get('email');
+  	    dataLayer.push({
   		'event': 'submit',
 		'email': email
 	});
-	    return this.email;
+	    return email;
 	}
     </script>
 	  
@@ -42,7 +42,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script>
     var form = document.querySelector('form');
     form.addEventListener('submit', handleSubmit);
-    var email = handleSubmit();
     </script>
   </body>
 </html>
