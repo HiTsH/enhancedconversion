@@ -5,12 +5,12 @@
 	window.dataLayer = window.dataLayer || [];
 	function handleSubmit(event) {
   	var data = new FormData(event.target);
-  	var email = data.get('email');
+  	this.email = data.get('email');
   	dataLayer.push({
   		'event': 'submit',
 		'email': email
 	});
-	    return email;
+	    return this.email;
 	}
     </script>
 	  
